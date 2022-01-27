@@ -4,7 +4,8 @@ import Dash from '../../components/dash'
 import { useRouter } from 'next/router'
 import { getServerSideProps } from '../../contexts/PrivateRoutes'
 import Link from 'next/link';
-import { BearCounter, Controls } from '../../states/bearsState'
+import { BearCounter, DecreaseBears, IncreaseBears } from '../../states/bearsState'
+import Spacing from '../../components/spacing'
 
 const navigation = ['Dashboard', 'Team', 'Projects', 'Calendar', 'Reports']
 const profile = ['Your Profile', 'Settings']
@@ -18,8 +19,8 @@ export default function Dashboard() {
   return (
     <Dash>
       {BearCounter()} bears around the world...
-      <br />
-      {Controls()}
+      <br /><br />
+      {IncreaseBears()} <Spacing /> {DecreaseBears()}
     </Dash>
   )
 }
