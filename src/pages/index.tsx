@@ -34,7 +34,10 @@ export default function Home() {
 
       <div className="max-w-sm w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+          <h1 className='text-center text-6xl'>Anime</h1>
+        </div>
+        <div>
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in</h2>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit(handleSignIn)}>
           <input type="hidden" name="remember" defaultValue="true" />
@@ -84,12 +87,6 @@ export default function Home() {
               <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-900">
                 Remember me
               </label>
-            </div>
-
-            <div className="text-sm">
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                Forgot your password?
-              </a>
             </div>
           </div>
 
