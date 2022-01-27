@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { destroyCookie } from "nookies";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import Spacing from "./spacing";
 
 export default function Dash({ children }) {
 
@@ -17,6 +19,7 @@ export default function Dash({ children }) {
 
     return (
         <div>
+
             <header className="bg-white shadow">
                 <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <h1 className="text-3xl font-bold text-gray-900" style={{ float: 'left' }}>Dashboard</h1>
@@ -31,6 +34,12 @@ export default function Dash({ children }) {
                 <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                     {/* Replace with your content */}
                     <div className="px-4 py-6 sm:px-0">
+                        <Link href='/dashboard'><a href="" onClick={(e) => e.stopPropagation()}>Dashboard</a></Link>
+                        <Spacing />
+                        <Link href='/dashboard/forms'><a href="" onClick={(e) => e.stopPropagation()}>Forms</a></Link>
+                        <br /><br />
+                        <hr />
+                        <br /><br />
                         {children}
                     </div>
                     {/* /End replace */}
